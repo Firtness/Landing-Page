@@ -1,0 +1,732 @@
+﻿/* CSS Reset y Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+}
+
+/* Header */
+header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+
+
+/*Contact us*/
+
+
+
+/* Estilos para la sección de contacto */
+.contact-us {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+
+}
+
+/* Título principal */
+.contact-us h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* Texto descriptivo */
+.contact-us .description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+
+}
+
+/* Grupos de formulario */
+.contact-us .form-group {
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
+.contact-us label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+
+    font-weight: normal;
+}
+
+/* Campos de entrada */
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us input[type="tel"],
+.contact-us textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+
+/* Área de texto */
+.contact-us textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Indicador de campo obligatorio */
+.contact-us .required::after {
+    content: " *";
+    color: #f00;
+    font-size: 14px;
+}
+
+/* Estilo para el campo de teléfono */
+.contact-us .phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.contact-us .phone-input span {
+    margin-right: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Grupo de checkbox */
+.contact-us .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin: 25px 0 30px;
+}
+
+.contact-us .checkbox-group input[type="checkbox"] {
+    margin: 3px 10px 0 0;
+}
+
+.contact-us .checkbox-group label {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+
+
+/* Botón de enviar */
+.contact-us .submit-btn {
+    background-color: #F6BE1F;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+}
+
+.contact-us .submit-btn:hover {
+    background-color: #333;
+}
+
+/* Estilos para la disposición en filas */
+.contact-us .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-us .form-row .form-group {
+    flex: 1;
+    min-width: 0; /* Evita problemas de desbordamiento */
+}
+
+.contact-us .full-width {
+    width: 100%;
+    clear: both; /* Asegura que esté en nueva línea */
+}
+
+/* Ajuste para el campo de teléfono */
+/* Estilos para los inputs transparentes con borde blanco */
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us input[type="tel"],
+.contact-us textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Borde blanco */
+    border-radius: 6px;
+    font-size: 14px;
+    color: white; /* Color del texto */
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Efecto hover para los inputs */
+.contact-us input:hover,
+.contact-us textarea:hover {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Efecto focus para los inputs */
+.contact-us input:focus,
+.contact-us textarea:focus {
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Placeholder estilo */
+.contact-us input::placeholder,
+.contact-us textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+}
+
+/* Estilo específico para el textarea */
+.contact-us textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Estilo para el campo de teléfono */
+.contact-us .phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.contact-us .phone-input span {
+    margin-right: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.contact-us .phone-input input {
+    flex-grow: 1;
+}
+
+/* Contenedor principal */
+.contact-container {
+    position: relative;
+    max-width: 700px; /* Ajusta según necesites */
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Fondo amarillo */
+.yellow-background {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: -15px;
+    bottom: 30px;
+    background-color: #F6BE1F;
+    border-radius: 12px;
+    z-index: -1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: rotate(-5deg); /* Inclinación 30 grados hacia la izquierda */
+    transform-origin: center center; /* Punto de rotación en el centro */
+}
+
+/* Contenedor gris del formulario */
+.contact-wrapper {
+    background-color: #2B2B2B; /* Gris claro - ajusta el color */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+
+/* Testimonials */
+.testimonials {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.testimonials-carousel {
+    overflow: hidden;
+    position: relative;
+    margin: 40px 0;
+    width: 90%; /* Ajusta el contenedor para que sea más amplio */
+    max-width: 1200px; /* Asegura que no se estire demasiado en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.testimonials-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px 0;
+    width: 100%; /* Asegura que ocupe el 100% del contenedor */
+}
+
+.testimonial-card {
+    min-width: 100%; /* Ajusta a 100% para mostrar solo una tarjeta a la vez */
+    box-sizing: border-box;
+    padding: 0 15px;
+    position: relative; /* Añadido para posicionar la imagen en la tarjeta */
+    flex-shrink: 0; /* Asegura que las tarjetas no se encojan */
+}
+
+.testimonial-image {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.comilla-img {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+.testimonial-content {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+    font-style: italic;
+    position: relative;
+}
+
+.testimonial-text::before {
+    content: '"';
+    font-size: 3rem;
+    color: #F6BE1F;
+    position: absolute;
+    left: -25px;
+    top: -15px;
+    opacity: 0.3;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-author strong {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.testimonial-author span {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.carousel-prev, .carousel-next {
+    background: #F6BE1F;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background: #e0a800;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .testimonial-card {
+        min-width: 100%; /* En pantallas más pequeñas, mostrar solo una tarjeta */
+    }
+
+    .carousel-controls {
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+/* Footer */
+footer {
+    background: white;
+    color: black;
+    padding: 50px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    color: #EDBA1D;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: space-between;  /* Distribuye el espacio entre iconos */
+    align-items: center;            /* Centra verticalmente */
+    gap: 20px;                      /* Espacio entre iconos */
+    margin: 20px 0;                 /* Margen opcional */
+}
+
+.icon-item {
+    text-align: center;
+    flex: 1;                        /* Cada icono ocupa igual espacio */
+}
+
+.icon-item i {
+    font-size: 2rem;                /* Tamaño del icono */
+    color: #EDBA1D;                 /* Color del icono */
+}
+
+.text-column{
+    color: #00838F;                 /* Color del texto */
+}
+
+/* Subscribe */
+.subscribe {
+    padding: 60px 20px;
+    background-color: #f5f7fa;
+}
+
+.newsletter-box {
+    max-width: 600px; /* Más ancho */
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-box h3 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.newsletter-box p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column; /* Botón debajo del input */
+    gap: 15px;
+}
+
+.email-form input {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 2px solid #e0e3e7;
+    border-radius: 8px;
+    transition: border 0.3s;
+}
+
+.email-form input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.email-form button {
+    width: 100%;
+    padding: 16px;
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.email-form button:hover {
+    background-color: #EDBA1D;
+}
+/* Latest Update*/
+.latest-updates {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden; /* Contiene el rectángulo */
+    background: white; /* Fondo para el contenido */
+    z-index: 1; /* Establece contexto de apilamiento */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.updates-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.updates-container {
+    display: flex;
+    gap: 40px;
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.courses-column {
+    flex: 2;
+    border-right: 1px solid #eee;
+    padding-right: 30px;
+}
+
+.dates-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course-item {
+    margin-bottom: 30px;
+}
+
+.course-title {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.course-desc {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.date-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.date-month {
+    display: block;
+    font-size: 1rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.date-day {
+    display: block;
+    font-size: 2.5rem;
+    color: #F6BE1F;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.date-year {
+    display: block;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.video-column {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px; /* Añade espacio alrededor */
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    width: 80%; /* Reduce el ancho para que no toque los bordes */
+    max-width: 560px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado adicional */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.yellow-rectangle {
+    position: absolute;
+    top: 50%;
+    left: -200px;
+    transform: translateY(-50%);
+    width: 90%;
+    height: 80%;
+    border: 5px solid #F6BE1F;
+    border-radius: 200px;
+    z-index: -1; /* Lo envía al fondo */
+    opacity: 0.8; /* Opcional: suaviza el color */
+}
+.thank-you-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.thank-you-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.thank-you-content h2 {
+    color: #2ecc71;
+    margin-top: 0;
+}
+
+.thank-you-close-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.thank-you-close-btn:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .feature-grid, .course-grid, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .video-wrapper {
+        margin-top: 40px;
+    }
+}
