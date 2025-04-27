@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("SChs7OFlW0S1_c8M3"); // reemplaza con tu user ID de EmailJS
+        })();
+    </script>
+
 </head>
 <body>
 <!-- Header -->
 <header>
+
     <a href="#" class="logo">
         <div class="logo-icon">
             <img src="./images/icon.png" alt="Logo" />
@@ -189,8 +200,281 @@
     </div>
 </section>
 
+<!-- Contact us Section -->
+<div class="contact-container">
+    <div class="yellow-background"></div>
+    <div class="contact-wrapper">
+        <section class="contact-us">
+            <h1>Say Hello to Us</h1>
+
+            <p class="description">
+                "Tus ideas son importantes para nosotros.<br> Cuéntanos sobre tu proyecto completando este formulario y juntos encontraremos la mejor solución."
+            </p>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name" class="required">What is your name?</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">What is your email?</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">What is your phone number?</label>
+                    <div class="phone-input">
+                        <span>+</span>
+                        <input type="tel" id="phone" name="phone" value="1234567890">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">What is your company?</label>
+                    <input type="text" id="company" name="company">
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="message">Write your message here</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" class="required">I have read and accept the Terms of<br>Service & Privacy Policy</label>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+        </section>
+    </div>
+
+    <!-- Mensaje de agradecimiento (oculto inicialmente) -->
+    <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+        <div class="thank-you-content">
+            <h2>¡Gracias por contactarnos!</h2>
+            <p>Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.</p>
+            <button class="thank-you-close-btn">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">Testimonials</h2>
+
+        <div class="testimonials-carousel">
+            <div class="testimonials-track">
+                <!-- Testimonio 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/comilla.png" alt="Comilla" class="comilla-img">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">Aprendí desde las herramientas más utilizadas hasta la teoría del diseño mas usada en proyectos reales.</p>
+                        <div class="testimonial-author">
+                            <strong>María Sánchez</strong>
+                            <span>Diseño Gráfico y UX/UI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/comilla.png" alt="Comilla" class="comilla-img">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">Los módulos eran claros y prácticos, y las actividades me ayudaron a aplicar lo aprendido.</p>
+                        <div class="testimonial-author">
+                            <strong>Luis Gómez</strong>
+                            <span>Marketing Digital para Principiantes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/comilla.png" alt="Comilla" class="comilla-img">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">Este curso de Ciencia de Datos es completo,está bien diseñado y bien formulado.</p>
+                        <div class="testimonial-author">
+                            <strong>Dr. Carlos Rivera</strong>
+                            <span>Ciencia de Datos Avanzada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/comilla.png" alt="Comilla" class="comilla-img">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">Los conceptos se explicaron de manera clara y estructurada, y pude aprender a mi propio ritmo.</p>
+                        <div class="testimonial-author">
+                            <strong>Ana Torres</strong>
+                            <span>Introducción a la Programación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles del carrusel -->
+        <div class="carousel-controls">
+            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Update -->
+<section class="latest-updates">
+
+    <div class="container">
+        <h2 class="section-title">Latest Updates</h2>
+        <div class="updates-grid">
+            <!-- Columna izquierda: Actualizaciones -->
+            <div class="updates-container">
+                <!-- Columna de cursos -->
+                <div class="courses-column">
+                    <div class="course-item">
+                        <h3 class="course-title">Advanced cybersecurity</h3>
+                        <p class="course-desc">Hacking ético y protección de sistemas<br>OWASP, Kali Linux, Metasploit</p>
+                    </div>
+
+                    <div class="course-item">
+                        <h3 class="course-title">Data Science with Python</h3>
+                        <p class="course-desc">Análisis de datos y machine learning<br>Tecnologías: Pandas, NumPy, Matplotlib, Scikit-learn</p>
+                    </div>
+
+                    <div class="course-item">
+                        <h3 class="course-title">Full Stack development</h3>
+                        <p class="course-desc">Construcción de aplicaciones web completas<br>Tecnologías: React, Node.js, Express, MongoDB</p>
+                    </div>
+                </div>
+
+                <!-- Columna de fechas -->
+                <div class="dates-column">
+                    <div class="date-item">
+                        <span class="date-month">SEP</span>
+                        <span class="date-day">16</span>
+                        <span class="date-year">2022</span>
+                    </div>
+
+                    <div class="date-item">
+                        <span class="date-month">OCT</span>
+                        <span class="date-day">25</span>
+                        <span class="date-year">2023</span>
+                    </div>
+
+                    <div class="date-item">
+                        <span class="date-month">DEC</span>
+                        <span class="date-day">14</span>
+                        <span class="date-year">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha: Video -->
+            <div class="video-column">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/A4KnrbHVyIA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="yellow-rectangle"></div>
+</section>
 
 
+
+<!-- Subscribe to our newsletter -->
+
+<section class="subscribe" style="background-image: url('images/biblioteca.jpg');">
+    <div class="newsletter-box">
+        <h3>Subscribe to our newsletter</h3>
+        <p>Leave your email and we will send you details about our educational courses and programs.</p>
+
+        <form class="email-form" action="https://formsubmit.co/u202122484@upc.edu.pe" method="POST" id="newsletter-form">
+            <input type="email" name="email" id="user-email" placeholder="Enter your email address" required>
+
+            <!-- Botón -->
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <img src="images/logoEduHive.png" alt="Logo Edu Hive" height="100px">
+                <div class="copyright">
+                    <p><i class="fas fa-copyright"></i> 2025 <strong>Eduhive</strong>. Diseñado con <i class="fas fa-heart" style="color: #ff0000;"></i> para la educación.</p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 >COMPANY</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Donec dignissim</a></li>
+                    <li><a href="#">Curabitur egestas</a></li>
+                    <li><a href="#">Nam posuere</a></li>
+                    <li><a href="#">Aenean facilisis</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 >SERVICES</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Cras convallis</a></li>
+                    <li><a href="#">Vestibulum faucibus</a></li>
+                    <li><a href="#">Quisque lacinia purus</a></li>
+                    <li><a href="#">Aliquam nec ex</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 >RESOURCES</h3>
+                <ul >
+                    <li ><a href="#">Suspendisse porttitor</a></li>
+                    <li><a href="#">Nam posuere</a></li>
+                    <li><a href="#">Curabitur egestas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <!-- Facebook, LinkedInd, Twitter,Instagram -->
+                <div class="icon-row">  <!-- Contenedor de la fila de iconos -->
+                    <div class="icon-item">
+                        <a href="#"><i class="fab fa-facebook"></i></a>  <!-- Icono 1 (ej: Font Awesome) -->
+
+                    </div>
+                    <div class="icon-item">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>  <!-- Icono 2 -->
+
+                    </div>
+                    <div class="icon-item">
+                        <a href="#"><i class="fab fa-twitter"></i></a>  <!-- Icono 3 -->
+
+                    </div>
+                    <div class="icon-item">
+                        <a href="#"><i class="fab fa-instagram"></i></a>  <!-- Icono 3 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+    <script src="script.js"></script>
 
 </body>
 </html>
