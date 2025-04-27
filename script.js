@@ -59,6 +59,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+    const menuToggle = document.createElement('div');
+    menuToggle.className = 'mobile-menu-toggle';
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    document.querySelector('header').appendChild(menuToggle);
+
+    const navLinks = document.querySelector('.nav-links');
+    const authButtons = document.querySelector('.auth-buttons');
+
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        authButtons.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            authButtons.classList.remove('active');
+        });
+    });
+
 
 
 
