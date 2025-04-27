@@ -1,35 +1,204 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Landing Page</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function(){
             emailjs.init("SChs7OFlW0S1_c8M3"); // reemplaza con tu user ID de EmailJS
         })();
     </script>
+
 </head>
 <body>
 <!-- Header -->
 <header>
-    <div class="container">
-        <nav>
-            <div class="logo">EDUCATION</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+
+    <a href="#" class="logo">
+        <div class="logo-icon">
+            <img src="./images/icon.png" alt="Logo" />
+        </div>
+    </a>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#features">WHY EDUHIVE</a></li>
+            <li><a href="#">TERTIMONIES</a></li>
+            <li><a href="#">SAFETY</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+            <button class="login-btn">LOGIN</button>
+            <button class="register-btn">REGISTER</button>
+            <button class="settings-btn">
+                <i class="fas fa-cog"></i>
+            </button>
+        </div>
+    </nav>
 </header>
 
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Explore, Learn, Grow</h1>
+        <p class="hero-description">
+            "Access high-quality courses designed to boost your <br>
+            academic and professional growth, from anywhere, at any<br>
+            time."
+        </p>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search course ...">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
 
+    <div class="hero-image">
+        <img src="./images/imagenInicio.png">
+    </div>
+
+</section>
+
+<!-- Main Feature Section -->
+<section class="features" id="features">
+    <div class="features-header">
+        <h2 class="features-title">Why choose EduHive?</h2>
+        <p class="features-subtitle">Explore a platform designed to help you learn faster, easier, and at your own pace.</p>
+    </div>
+
+    <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+            <img src="./images/icono1.png" alt="HD Videos" class="feature-image">
+            <div class="feature-content">
+                <h3 class="feature-number">+100K</h3>
+                <p class="feature-text">HD Videos</p>
+            </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+            <img src="./images/icono2.png" alt="Professional Mentors" class="feature-image">
+            <div class="feature-content">
+                <h3 class="feature-number">+200</h3>
+                <p class="feature-text">Professional Mentors</p>
+            </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+            <img src="./images/icono3.png" alt="Savings" class="feature-image">
+            <div class="feature-content">
+                <h3 class="feature-number">$500</h3>
+                <p class="feature-text">Saves per Month</p>
+            </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+            <img src="./images/icono4.png" alt="Lifetime Access" class="feature-image">
+            <div class="feature-content">
+                <h3 class="feature-number">Free</h3>
+                <p class="feature-text">Life Time Access</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore Courses Section -->
+<section class="explore-courses">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Explore Course</h2>
+            <p class="section-subtitle">Discover a wide variety of courses designed to help you grow your skills and achieve your goals. Start your learning journey today!</p>
+        </div>
+
+        <div class="courses-grid">
+            <div class="course-card">
+                <img src="./images/photography.png" alt="Photography" class="course-image">
+                <div class="course-overlay">
+                    <h3 class="course-title">Photography</h3>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="./images/artificial-intelligence.png" alt="Artificial Intelligence" class="course-image">
+                <div class="course-overlay">
+                    <h3 class="course-title">Artificial Intelligence</h3>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="./images/architect.png" alt="Architect" class="course-image">
+                <div class="course-overlay">
+                    <h3 class="course-title">Architect</h3>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="./images/geography.png" alt="Geography" class="course-image">
+                <div class="course-overlay">
+                    <h3 class="course-title">Geography</h3>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="./images/art.png" alt="Art" class="course-image">
+                <div class="course-overlay">
+                    <h3 class="course-title">Art</h3>
+                </div>
+            </div>
+
+            <div class="course-card all-courses-card">
+                <h3 class="all-courses-title">ALL COURSE</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dream Section -->
+<section class="dream-section">
+    <div class="dream-color"></div>
+
+    <div class="dream-content">
+        <div class="dream-images">
+            <div class="dream-diamond dream-diamond-1">
+                <img src="./images/diamond1.png" alt="Student writing on blackboard">
+            </div>
+            <div class="dream-diamond dream-diamond-2">
+                <img src="./images/diamond2.png" alt="Student working on laptop">
+            </div>
+            <div class="dream-diamond dream-diamond-3">
+                <img src="./images/diamond3.png" alt="Math equations on blackboard">
+            </div>
+            <div class="dream-diamond dream-diamond-4">
+                <img alt="Math equations on blackboard">
+            </div>
+            <div class="dream-diamond dream-diamond-5">
+                <img alt="Math equations on blackboard">
+            </div>
+        </div>
+
+        <div class="dream-text">
+            <h2 class="dream-title">Take Your Knowledge<br>to the Next Level</h2>
+            <p class="dream-description">
+                Discover everything you can achieve with our educational platform.
+            </p>
+            <a href="#" class="dream-btn">START LEARNING</a>
+        </div>
+    </div>
+
+    </div>
+</section>
 
 <!-- Contact us Section -->
 <div class="contact-container">
@@ -228,7 +397,7 @@
 
 
 <!-- Subscribe to our newsletter -->
-<!-- Subscribe to our newsletter -->
+
 <section class="subscribe" style="background-image: url('images/biblioteca.jpg');">
     <div class="newsletter-box">
         <h3>Subscribe to our newsletter</h3>
@@ -306,5 +475,6 @@
     </div>
 </footer>
     <script src="script.js"></script>
+
 </body>
 </html>
